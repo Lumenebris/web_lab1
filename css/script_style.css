@@ -1,0 +1,23 @@
+body {
+	color: #045FB4;
+	font-family: Consolas, monospace;
+	}
+	
+#time {
+	text-align: right;
+}
+
+span {
+	font-size: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid #2e6da4;
+	width: 400px;
+	text-align: center;
+}
+
+tr td {
+	border: 1px solid #2e6da4;
+}

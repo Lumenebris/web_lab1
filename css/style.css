@@ -1,0 +1,140 @@
+html, body, .content{
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+html{
+	background-color: #EFF5FB;
+}
+
+body{
+	min-width: 900px;
+	font-family:  Consolas, monospace;
+	margin: auto;
+}
+
+header{ 
+    background-color: #337AB7;
+	border-bottom: 20px solid #E0ECF8;
+	font-size: 80%;
+	text-align: center;
+}
+header h1{
+	background-color: #2D6B9F;
+	color: #FFF;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 2px 3px rgba(0,0,0,0.2);
+	padding: 5px;
+}
+
+header h2, h3{
+	color: #E8F5FF;
+	padding: 3px;
+}
+
+header h1, h2, h3{
+	margin: 0;
+}
+
+footer{
+	background-color: #E0ECF8;
+	bottom: 0;
+	color: #045FB4;
+	padding: 10px;
+	text-align: center;
+}
+
+.content{
+	padding: 0;
+	border: 0;
+	margin: auto;
+	width: 820px;
+}
+
+input {
+	border-radius: 10px;
+	border: 1px solid #2e6da4;
+	text-align: center;
+}
+
+.leftSidebar{
+    background-color: #C6E2FD;
+	color: #045FB4;
+	float: left;
+	height: 600px;
+	width: 47%;
+	text-align: left;
+	padding-left: 10px;
+	border-radius: 10px;
+}
+
+.rightSidebar{
+    background-color: #C6E2FD;
+	color: #045FB4;
+	float: right;
+	height: 600px;
+	width: 47%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.error{
+	color: #8258FA;
+}
+
+.leftSidebar input[type=checkbox], input[type=radio] {
+	cursor: pointer;
+	font-size: 50%;
+	background-color: #FFF;
+    color: #337ab7;
+}
+
+.check_button, .submit_button {
+	display: block;
+    cursor: pointer;
+	background: #337AB7;
+	color: #FFF;
+	
+	font-size: 16px;
+    line-height: 16px;
+    padding: 3px 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+	border: 1px solid #2e6da4;
+    width: 140px;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+}
+
+.check_button:hover, .submit_button:hover{
+	background: #FFF;
+	color: #337AB7;
+}
+.leftSidebar input[disabled]{
+	display: block;
+	opacity: .6;
+	cursor: not-allowed;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+.buttons table td{
+	padding-right: 7px;
+}
+
+.choose_y table{
+	border: 1px solid #2e6da4;
+}
+
+.choose_y td{
+	border: 1px solid #2e6da4;
+	width: 60px;
+	padding: 3px 7px;
+}
+
+.container {
+	padding: 10px;
+}

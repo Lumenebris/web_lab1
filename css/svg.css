@@ -1,0 +1,29 @@
+use.grid {
+	opacity: 1;
+	fill: #ffffff;
+	stroke: #cdcdcd;
+	stroke-width: 0.3;
+}
+
+use.text {
+	font-size: 5px;
+	font-family: Consolas, monospace;
+}
+
+use.coordinates {
+	font-size: 5px;
+	font-family: Consolas, monospace;
+	fill: #8258FA;
+}
+
+use.region {
+	fill: #7ce577;
+}
+
+use.axis {
+	stroke: #000000;
+}
+
+use.point {
+	fill: #8258FA;
+}
