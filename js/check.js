@@ -8,7 +8,7 @@ function check() {
 	var yArray = Array.from(document.querySelectorAll('[id="y1"], [id="y2"], [id="y3"], [id="y4"], [id="y5"], [id="y6"], [id="y7"], [id="y8"], [id="y9"]'));
 	var flag_y = 1;
 	var flag_x = 2;
-	
+	document.getElementById("submit").disabled = 1;
 	//проверка y
 	for (y of yArray) {
 		if (y.checked) {
