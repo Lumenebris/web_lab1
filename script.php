@@ -8,32 +8,36 @@
 </head>
 <body>
 <?php
-	session_start();
-	$start = microtime(true);					
+	session_start();					
 	
 	$flag = $_GET['submit'];
 	$x = (float) $_GET['x'];
-	$y = (int) $_GET['y'];
-	$r = (int) $_GET['r'];
+	$y = $_GET['y'];
+	$r = $_GET['r'];
 	
-	makeAnswer($flag, $x, $y, $r, $start);
+	if ($flag) {
+		makeTable(10);
+	} else {
+		for ($i = 0; $i < count($y); $i++) {
+			$start = microtime(true);
+			pushAnswer($x, $y[$i], $r, $start); 
+		}
+		makeTable(10);
+	}
 	
-	function makeAnswer($flag, $x, $y, $r, $start) {
-		if ($flag != disabled) {
-			if (!validate($x, $y, $r)) {
+	function pushAnswer($x, $y, $r, $start) {
+		if (!validate($x, $y, $r)) {
 				array_push($_SESSION['arr'], false);
-			} else {
-				if (check_zone($x, $y, $r))
-					$check = true;
-				else
-					$check = false;
-				$_SESSION['i']++;
-				$n = $_SESSION['i'];
-				$time = round((microtime(true) - $start) * 1000, 3);
-				$currentTime = date("H:i:s", strtotime('+3 hour'));
-				array_push($_SESSION['arr'], array($n, $x, $y, $r, $check, $currentTime, $time));
-			}
-			makeTable(10);
+		} else {
+			if (check_zone($x, $y, $r))
+				$check = true;
+			else
+				$check = false;
+			$_SESSION['i']++;
+			$n = $_SESSION['i'];
+			$time = round((microtime(true) - $start) * 1000, 3);
+			$currentTime = date("H:i:s", strtotime('+3 hour'));
+			array_push($_SESSION['arr'], array($n, $x, $y, $r, $check, $currentTime, $time));
 		}
 	}
 	
