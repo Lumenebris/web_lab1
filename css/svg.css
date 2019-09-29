@@ -1,29 +1,31 @@
 use.grid {
 	opacity: 1;
-	fill: #ffffff;
+	fill: #fff;
 	stroke: #cdcdcd;
 	stroke-width: 0.3;
 }
 
 use.text {
-	font-size: 5px;
+	font-size: 6px;
 	font-family: Consolas, monospace;
+	fill: #003399;
 }
 
 use.coordinates {
-	font-size: 5px;
+	font-size: 6px;
 	font-family: Consolas, monospace;
-	fill: #8258FA;
+	fill: #045FB4;
 }
 
 use.region {
-	fill: #7ce577;
+	fill: #99CCFF;
 }
 
 use.axis {
-	stroke: #000000;
+	stroke: #045FB4;
+	stroke-width: 0.6;
 }
 
 use.point {
-	fill: #8258FA;
+	fill: #003399;
 }
