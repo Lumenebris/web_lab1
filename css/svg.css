@@ -8,13 +8,13 @@ use.grid {
 use.text {
 	font-size: 6px;
 	font-family: Consolas, monospace;
-	fill: #003399;
+	fill: #045FB4;
 }
 
 use.coordinates {
 	font-size: 6px;
 	font-family: Consolas, monospace;
-	fill: #045FB4;
+	fill: #003399;
 }
 
 use.region {
