@@ -36,7 +36,7 @@ if (is_null($_SESSION['i'])) {
 					</div>
 					<div class="inputX">
 						<p class="heading"><b>Введите значение X:</b>
-							<p><input id="text_x" type="text" size="15" name="x" placeholder="от -3 до 5" onblur="verifyX(this)" oninput="verifyX(this)"></p>
+							<p><input id="text_x" type="text" size="15" name="x" placeholder="от -3 до 5" onblur="verifyX(this)" oninput="verifyX(this)" onchange="checkX()"></p>
 							<p id="message" style="visibility: hidden">.</p>
 						</p>
 					</div>
@@ -61,19 +61,11 @@ if (is_null($_SESSION['i'])) {
 								</table>
 						</p>
 					</div>
-					<div class="buttons">
-						<table>
-							<tr>
-								<td>
-									<input type="button" id="button" value=" Проверить " OnClick="check()">
-								</td>
-								<td>
-									<input type="submit" id="submit"  OnClick="onSubmit()" value=" Результат " disabled>
-								</td>
-							</tr>
-						</table>
+					<div class="button">
+						<input type="submit" id="submit"  OnClick="check()" value=" Результат " >
 					</div>
 					<p id="error"></p>
+					<input type="hidden" name="flag" id="flag" value="1">
 				</form>
 				<img src="images/image.png">
 			</div>
