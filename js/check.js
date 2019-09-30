@@ -5,7 +5,7 @@ function message(msg) {
     node.style.visibility = 'visible';
 }
 
-//проверка поля x
+//проверка x
 function verifyX(x) {
 	const xMax = 5;
 	const xMin = -3;
@@ -48,21 +48,29 @@ function verifyX(x) {
     return true;
 }
 
+//повторная проверка x
+function checkX() {
+    let xInput = document.getElementById('text_x');
+	let pat1 = new RegExp(/^(-?[0-9]*[,.]0*$)$/);
+	let pat2 = new RegExp(/^(-?0[,.]0*$)$/);
+	if (pat1.test(xInput.value)) {
+		if (pat2.test(xInput.value)) {
+			xInput.value = '0';
+		} else xInput.value = xInput.value.replace(/[,.]0*/, '');
+	}
+}
+
 //проверка x и y
 function check() {
 	let error = document.getElementById('error');
-	error.innerHTML = '';
-	let yArray = Array.from(document.querySelectorAll('[id="y1"], [id="y2"], [id="y3"], [id="y4"], [id="y5"], [id="y6"], [id="y7"], [id="y8"], [id="y9"]'));
-	let pat = new RegExp(/^(-?0[,.]0*$)$/);
     let xInput = document.getElementById('text_x');
+	let yArray = Array.from(document.querySelectorAll('[id="y1"], [id="y2"], [id="y3"], [id="y4"], [id="y5"], [id="y6"], [id="y7"], [id="y8"], [id="y9"]'));
 	let flag_y = 0;
 	let flag_x = 0;
+	error.innerHTML = '';
 	
 	//проверка x
 	if (xInput.value != '') {
-		if (pat.test(xInput.value)) {
-			xInput.value = '0';
-		}
 		flag_x = 1;
 	} 
 	
@@ -77,7 +85,6 @@ function check() {
 	for (y of yArray) {
 		if (y.checked) {
 			flag_y = 1;
-			//yCount++;
 		}
 	}
 	
@@ -90,11 +97,6 @@ function check() {
 	
 	//если x и y правильные
 	if (flag_x && flag_y) {
-		document.getElementById("submit").disabled = 0;
+		document.getElementById("flag").value = 0;
 	}
-}
-
-//блокировка кнопки Результат
-function onSubmit() {
-	setTimeout(function () { document.getElementById("submit").disabled = 1; }, 2000);
 }
