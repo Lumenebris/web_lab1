@@ -10,7 +10,7 @@
 <?php
 	session_start();					
 	
-	$flag = $_GET['submit'];
+	$flag = $_GET['flag'];
 	$x = (float) $_GET['x'];
 	$y = $_GET['y'];
 	$r = $_GET['r'];
